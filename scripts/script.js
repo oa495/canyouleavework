@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	  'rest, relax, a break': {
 			companies: ['Google', 'Fab', 'Airbnb', 'LinkedIn', 'Twitter'],
 			examples: ['a nap pod', 'an indoor treehouse', 'an indoor slide', 'legos', 'Dance Dance Revolution',
-			'a sports pub', 'a wellness center', 'on-site acupuncture', 'on-site massages', 'on-site yoga classes',
+			'a wellness center', 'on-site acupuncture', 'on-site massages', 'on-site yoga classes',
 			'a rooftop dog park', 'on-site icecream']
 	  },
 	  'a dentist, see a dentist':{

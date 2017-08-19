@@ -12,12 +12,16 @@ h1 {
 	font-size: 52px;
 }
 
-a {
+a:not(.arrow) {
 	text-decoration: none;
 	color: black;
 	border-bottom: 3px #4787FD dotted;
 }
 
+button {
+  border: none;
+  background: white;
+}
 
 input {
 	display: block;
@@ -66,15 +70,20 @@ input {
 	padding: 10px;
 }
 
-.alert {
-	background: white;
-	max-width: 50%;
-	padding: 20px;
-	position: absolute;
+.alert.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s linear 500ms, opacity 500ms;
 }
 
-.hidden {
-	display: none;
+.alert {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s linear 0s, opacity 500ms;
+  background: white;
+  max-width: 50%;
+  padding: 20px;
+  position: absolute;
 }
 
 /** Hover.css http://ianlunn.github.io/Hover/ **/ 
