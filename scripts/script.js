@@ -3,12 +3,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	var sentenceEnd = document.getElementById("sentence-end");
 
 	var firstSelection = new Awesomplete(sentenceStart, {
-		list: ['I need to', 'I need'],
+		list: ['need to', 'need'],
+		minChars: 1,
 		maxItems: 5
 	});
 
 	var secondSelection = new Awesomplete(sentenceEnd, {
-		maxItems: 5
+		maxItems: 5,
+		minChars: 1
 	});
 	var nouns = ['a massage', 'a break', 'something not on this list', 'some ice cream', 'a dentist',
 			'a doctor', 'sleep', 'a beer', 'alcohol', 'acupuncture', 'coffee', 'food', 'a treadmill desk',
@@ -22,10 +24,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	
 	function populateSecondList(statement) {
 		switch (statement) {
-			case 'I need to':
+			case 'need to':
 				secondSelection.list = verbs;
 				break;
-			case 'I need':
+			case 'need':
 				secondSelection.list = nouns;
 				break;
 		}
@@ -46,102 +48,114 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	var perks  = expand({
 		'sleep': {
 			companies: ['Google'],
-			what: ['a nap pod', 'artisanal coffee bar', 'on-site massages']
+			examples: ['a nap pod', 'an artisanal coffee bar', 'on-site massages']
 	 	},
 	  'rest, relax, a break': {
 			companies: ['Google', 'Fab', 'Airbnb', 'LinkedIn', 'Twitter'],
-			what: ['a nap pod', 'indoor treehouse', 'indoor slide', 'legos', 'Dance Dance Revolution',
-			'sports pub', 'wellness center', 'on-site acupuncture', 'on-site massages', 'on-site yoga classes',
-			'rooftop dog park', 'on-site icecream']
+			examples: ['a nap pod', 'an indoor treehouse', 'an indoor slide', 'legos', 'Dance Dance Revolution',
+			'a sports pub', 'a wellness center', 'on-site acupuncture', 'on-site massages', 'on-site yoga classes',
+			'a rooftop dog park', 'on-site icecream']
 	  },
 	  'a dentist, see a dentist':{
 	  	companies: ['LinkedIn', 'Facebook'],
-	  	what: ['on-site dental']
+	  	examples: ['on-site dental']
 	  },
 	  'chiropractor, see a chiropractor': {
-			companies: [],
-			what: ['on-site chiropractor', 'wellness center']
+			companies: ['Apple'],
+			examples: ['an on-site chiropractor', 'a wellness center']
 	  },
 	  'a doctor, see a doctor': {
 	  	companies: ['Apple'],
-	  	what: ['wellness center']
+	  	examples: ['a wellness center']
 	  },
 	  'a massage': {
-			companies: ['Zynga', 'LinkedIn', 'Google', 'Twilio', ''],
+			companies: ['Zynga', 'LinkedIn', 'Google', 'Twilio'],
+			examples: ['massage therapy']
 	  },
 	  'a beer, a drink, alcohol, wine': {
 	  	companies: ['Yammer', 'Twitter', 'Apple', 'Zillow', 'Dropbox', 'Facebook'],
-	  	what: ['sports pub', 'free beer']
+	  	examples: ['a sports pub', 'free beer', 'free wine']
 	  },
 	  'play a game, an arcade': {
 	  	companies: ['Zynga', 'Dropbox', 'Facebook', 'Spotify', 'Zappos'],
-	  	what: ['arcade and gaming systems like Xbox 360, PS3 & Nintendo', 'ping pong', 'Dance dance Revolution',
+	  	examples: ['arcade and gaming systems like Xbox 360, PS3 & Nintendo', 'ping pong', 'Dance dance Revolution',
 	  	'gaming tournaments']
 	  },
 	  'coffee': {
 	  	companies: ['LinkedIn', 'Twitter'],
-	  	what: ['coffee bar']
+	  	examples: ['a coffee bar']
 	  },
 	  'food, eat': {
 	  	companies: ['Fab', 'Zynga', 'StumbleUpon', 'Twitter', 'Facebook', 'Eventbrite', 'Dropbox', 'Airbnb'],
-	  	what: ['a candy shop', 'breakfast', 'never-ending snack supply', 
-	  	'lunch', 'dinner', 'ice-cream bar']
+	  	examples: ['a candy shop', 'breakfast', 'a never-ending snack supply', 
+	  	'lunch', 'dinner', 'an ice-cream bar']
 	  },
 	  'exercise, work out': {
 	  	companies: ['Yammer', 'Adobe', 'Asana', 'Twitter', 'Airbnb', 'Zillow', 'Ebay', 'Facebook', 'LinkedIn'],
-	  	what: ['a treadmill desk', 'a basketball court', 'volleyball court', 'a gym',
+	  	examples: ['a treadmill desk', 'a basketball court', 'volleyball court', 'a gym',
 	  	'fitness classes']
 	  },
 	  'do laundry, do drycleaning': {
 	  	companies: ['Facebook'],
-	  	what: ['laundry services', 'dry cleaning']
+	  	examples: ['laundry services', 'dry cleaning services']
 	  },
 	  'cut my hair, get my hair done': {
 	  	companies: ['Zynga'],
-	  	what: ['on-site barbershop', 'a hair stylist']
+	  	examples: ['on-site barbershop', 'a hair stylist']
 	  },
 	  'something not on this list, do something not on this list': {
 	  	companies: ['Google'],
-	  	what: ['concierge']
+	  	examples: ['a concierge']
 	  },
 	  'listen to music': {
 	  	companies: ['Spotify', 'Pandora'],
-	  	what: ['on-site concerts']
+	  	examples: ['on-site concerts']
 	  },
 	  'send a package': {
-	  	companies: [],
-	  	what: ['delivery services with usps']
+	  	companies: ['Facebook'],
+	  	examples: ['delivery services']
 	  },
 	  'pet a dog': {
 	  	companies: ['Yammer', 'Eventbrite', 'Bark Box', 'Amazon'],
-	  	what: ['bring your dog to work day', 'dog park']
+	  	examples: ['bring your dog to work day', 'dog park']
 	  },
 	  'fix my bike/car': {
 	  	companies: ['Google', 'Facebook'],
-	  	what: ['on-site oil change and car wash services', 'bike repair services']
+	  	examples: ['on-site oil change and car wash services', 'bike repair services']
 	  },
 	  'enjoy nature': {
 	  	companies: ['Amazon', 'Airbnb'],
-	  	what: ['Indoor treehouse']
+	  	examples: ['a indoor treehouse']
 	  }
 	});
 
 	function getPerks(need) {
-		var statements = ['Well lucky for you!', 'You don\'t have to leave! You never have to leave', 'No need to move'];
+		var statements = ['Lucky for you.', 'You don\'t have to leave! You never have to leave.',
+		'Stay right there!', 'Don\'t move a muscle!', 'No need to move.'];
 		var perk = perks[need];
-		var company;
-
-		return `${opening}`;
+		var companies = perk.companies;
+		var company = companies[Math.floor(Math.random()*companies.length)];
+		var examples = perk.examples;
+		var example = examples[Math.floor(Math.random()*examples.length)];
+		var statement = statements[Math.floor(Math.random()*companies.length)];
+		var message = statement + ' Companies like ' + company + ' have ' + example + ' to meet your needs!';
+		var alert = document.getElementsByClassName('alert-message')[0];
+		alert.textContent = message;
+		(document.getElementsByClassName('alert')[0]).classList.remove('hidden');
 	}
 
-	sentenceStart.addEventListener("awesomplete-selectcomplete", function(event) {
+	sentenceStart.addEventListener('awesomplete-selectcomplete', function(event) {
 		let text = event.text;
 		populateSecondList(text.value);
-		
   }, false);
 
-	sentenceEnd.addEventListener("awesomplete-selectcomplete", function(event) {
+	sentenceEnd.addEventListener('awesomplete-selectcomplete', function(event) {
 		let text = event.text;
-		getPerks(text);
+		getPerks(text.value);
   }, false);
+
+  var cancelAlert = document.getElementsByClassName('exit-alert')[0];
+  cancelAlert.addEventListener('click', function(event) {
+  	(document.getElementsByClassName('alert')[0]).classList.add('hidden');
+  })
 });

@@ -37,9 +37,20 @@ input {
   justify-content: center;
 }
 
+.header-section {
+	flex-direction: column;
+}
+
 .awesomplete input {
-	width: 300px;
 	height: 60px;
+	background: transparent;
+	border: 3px dashed white;
+  margin-left: 15px;
+  padding: 5%;
+}
+
+#sentence-start {
+	width: 150px;
 }
 
 .awesomplete > ul, .awesomplete input {
@@ -48,11 +59,22 @@ input {
 
 .footer-list {
 	border: 6px dotted #4787FD;
-  padding: 10%;
+  padding: 5%;
 }
 
 .footer-list li {
 	padding: 10px;
+}
+
+.alert {
+	background: white;
+	max-width: 50%;
+	padding: 20px;
+	position: absolute;
+}
+
+.hidden {
+	display: none;
 }
 
 /** Hover.css http://ianlunn.github.io/Hover/ **/ 
