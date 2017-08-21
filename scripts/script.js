@@ -137,7 +137,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		var company = companies[Math.floor(Math.random()*companies.length)];
 		var examples = perk.examples;
 		var example = examples[Math.floor(Math.random()*examples.length)];
-		var statement = statements[Math.floor(Math.random()*companies.length)];
+		var statement = statements[Math.floor(Math.random()*statements.length)];
 		var message = statement + ' Companies like ' + company + ' have ' + example + ' to meet your needs!';
 		var alert = document.getElementsByClassName('alert-message')[0];
 		alert.textContent = message;
