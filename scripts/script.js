@@ -12,14 +12,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		maxItems: 5,
 		minChars: 1
 	});
-	var nouns = ['a massage', 'a break', 'something not on this list', 'some ice cream', 'a dentist',
-			'a doctor', 'sleep', 'a beer', 'alcohol', 'acupuncture', 'coffee', 'food', 'a treadmill desk',
+	var nouns = ['a massage', 'a break', 'something not on this list', 'a dentist',
+			'a doctor', 'sleep', 'a beer', 'alcohol', 'acupuncture', 'coffee', 'food',
 			'an arcade', 'a drink', 'wine'];
 	var verbs = ['do something not on this list', 'see a chiropractor',
 			'see a dentist', 'sleep', 'play a game', 'relax', 'rest', 'do laundry',
 			'see a doctor', 'cut my hair', 'work out', 'exercise',
 			'do drycleaning', 'fix my bike/car', 'eat', 'drink', 
-			'send a package', 'change my life', 'get my hair done', 'enjoy nature',
+			'send a package', 'get my hair done', 'enjoy nature',
 			'pet a dog', 'listen to music'];
 	
 	function populateSecondList(statement) {
