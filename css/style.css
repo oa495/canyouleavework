@@ -5,11 +5,11 @@ body {
   align-items: center;
   justify-content: center;
   color: black;
-  font-size: 24px;
+  font-size: 1.3em;
 }
 
 h1 {
-	font-size: 52px;
+  text-align: center;
 }
 
 a:not(.arrow) {
@@ -27,18 +27,24 @@ input {
 	display: block;
 }
 
+footer {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
 .wrapper {
 	display: flex;
 	flex-direction: column;
-	margin: 0 5%;
+	margin: 0 2%;
 }
 
 .header-section, .input-section {
   display: flex;
-  width: 100%;
+  max-width: 80%;
   height: 100%;
   align-items: center;
   justify-content: center;
+  margin: 0 auto;
 }
 
 .header-section {
@@ -68,6 +74,7 @@ input {
 
 .footer-list li {
 	padding: 10px;
+  margin-left: 10px;
 }
 
 .alert.hidden {
@@ -157,4 +164,32 @@ input {
   animation-timing-function: ease-in-out;
   -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
+}
+
+@media (max-width: 680px) {
+  .alert {
+    max-width: 70%; 
+  }
+
+  .input-section {
+    flex-direction: column;
+  }
+
+  .awesomplete {
+    padding: 10px;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .alert {
+    max-width: 70%;
+  }
+
+  .input-section {
+    flex-direction: column;
+  }
+
+  .awesomplete {
+    padding: 10px;
+  }
 }

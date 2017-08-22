@@ -145,12 +145,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	}
 
 	sentenceStart.addEventListener('awesomplete-selectcomplete', function(event) {
-		let text = event.text;
+		var text = event.text;
 		populateSecondList(text.value);
   }, false);
 
 	sentenceEnd.addEventListener('awesomplete-selectcomplete', function(event) {
-		let text = event.text;
+		var text = event.text;
 		getPerks(text.value);
   }, false);
 
