@@ -1,35 +1,35 @@
 .awesomplete [hidden] {
-    display: none;
+	display: none;
 }
 
 .awesomplete .visually-hidden {
-    position: absolute;
-    clip: rect(0, 0, 0, 0);
+	position: absolute;
+	clip: rect(0, 0, 0, 0);
 }
 
 .awesomplete {
-    display: inline-block;
-    position: relative;
+	display: inline-block;
+	position: relative;
 }
 
 .awesomplete > input {
-    display: block;
+	display: block;
 }
 
 .awesomplete > ul {
-    position: absolute;
-    left: 0;
-    z-index: 1;
-    min-width: 100%;
-    box-sizing: border-box;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    background: white;
+	position: absolute;
+	left: 8%;
+	z-index: 1;
+	min-width: 85%;
+	box-sizing: border-box;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	background: white;
 }
 
 .awesomplete > ul:empty {
-    display: none;
+  display: none;
 }
 
 .awesomplete > ul {
@@ -53,48 +53,47 @@
 	}
 }
 
-	/* Pointer */
-	.awesomplete > ul:before {
-		content: "";
-		position: absolute;
-		top: -.43em;
-		left: 1em;
-		width: 0; height: 0;
-		padding: .4em;
-		background: white;
-		border: inherit;
-		border-right: 0;
-		border-bottom: 0;
-		-webkit-transform: rotate(45deg);
-		transform: rotate(45deg);
-	}
+/* Pointer */
+.awesomplete > ul:before {
+	content: "";
+	position: absolute;
+	top: -.43em;
+	left: 1em;
+	width: 0; height: 0;
+	padding: .4em;
+	background: white;
+	border: inherit;
+	border-right: 0;
+	border-bottom: 0;
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
 
-	.awesomplete > ul > li {
-		position: relative;
-		padding: .2em .5em;
-		cursor: pointer;
-	}
+.awesomplete > ul > li {
+	position: relative;
+	padding: .2em .5em;
+	cursor: pointer;
+}
+
+.awesomplete > ul > li:hover {
+	background: #4787FD;
+	color: black;
+}
+
+.awesomplete > ul > li[aria-selected="true"] {
+	background: #4787FD;
+	color: white;
+}
 	
-	.awesomplete > ul > li:hover {
-		background: #4787FD;
-		color: black;
-	}
-	
-	.awesomplete > ul > li[aria-selected="true"] {
-		background: #4787FD;
-		color: white;
-	}
-	
-		.awesomplete mark {
-			background: white;
-		}
-		
-		.awesomplete li:hover mark {
-			background: #4787FD;
-		}
-		
-		.awesomplete li[aria-selected="true"] mark {
-			background: #4787FD;
-			color: inherit;
-		}
-/*# sourceMappingURL=awesomplete.css.map */
+.awesomplete mark {
+	background: white;
+}
+
+.awesomplete li:hover mark {
+	background: #4787FD;
+}
+
+.awesomplete li[aria-selected="true"] mark {
+	background: #4787FD;
+	color: inherit;
+}
