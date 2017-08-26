@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	var sentenceEnd = document.getElementById("sentence-end");
 
 	var firstSelection = new Awesomplete(sentenceStart, {
-		list: ['need to', 'need'],
+		list: ['need to', 'need', 'want', 'want to'],
 		minChars: 1,
 		maxItems: 5
 	});
@@ -28,6 +28,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
 				secondSelection.list = verbs;
 				break;
 			case 'need':
+				secondSelection.list = nouns;
+				break;
+			case 'want to':
+				secondSelection.list = verbs;
+				break;
+			case 'want':
 				secondSelection.list = nouns;
 				break;
 		}
